@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - System Settings">
+    <title>Admin Settings - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html" class="active"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Admin Settings</h2>
+                        <p>Configure website metadata, administration preferences, and interface branding</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="dashboard.html" class="btn btn-secondary">&larr; Return to Dashboard</a>
+                    </div>
+                </div>
+
+                <!-- Academic Viva Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>Project Note:</strong> System settings configuration form rendered with HTML5 standard inputs. Submission redirects to Dashboard (static project demonstration).</div>
+                </div>
+
+                <!-- Settings Form Card -->
+                <div class="form-card">
+                    <form action="dashboard.html" method="get">
+
+                        <div class="form-grid">
+
+                            <!-- Website Name -->
+                            <div class="form-group">
+                                <label for="website-name">Website Name <span class="required">*</span></label>
+                                <input type="text" id="website-name" name="website_name" value="MovieFlix" required>
+                                <div class="form-help">Displayed across site title bars and branding logos.</div>
+                            </div>
+
+                            <!-- Website Tagline -->
+                            <div class="form-group">
+                                <label for="website-tagline">Website Tagline <span class="required">*</span></label>
+                                <input type="text" id="website-tagline" name="website_tagline" value="Your ultimate destination for movies and TV shows." required>
+                                <div class="form-help">Appears beneath hero banners and search titles.</div>
+                            </div>
+
+                            <!-- Admin Name -->
+                            <div class="form-group">
+                                <label for="admin-name">Admin Name <span class="required">*</span></label>
+                                <input type="text" id="admin-name" name="admin_name" value="Alex Mercer" required>
+                                <div class="form-help">Primary superuser account name.</div>
+                            </div>
+
+                            <!-- Admin Email -->
+                            <div class="form-group">
+                                <label for="admin-email">Admin Email <span class="required">*</span></label>
+                                <input type="email" id="admin-email" name="admin_email" value="alex.mercer@movieflix.com" required>
+                                <div class="form-help">Receives critical system notifications and support alerts.</div>
+                            </div>
+
+                            <!-- Website Theme -->
+                            <div class="form-group">
+                                <label for="website-theme">Website Theme <span class="required">*</span></label>
+                                <select id="website-theme" name="website_theme" required>
+                                    <option value="dark" selected>Dark Cinema Theme (Default #111111)</option>
+                                    <option value="light">Light Theme</option>
+                                    <option value="red">MovieFlix Crimson Accent Theme</option>
+                                    <option value="contrast">High Contrast Mode</option>
+                                </select>
+                                <div class="form-help">Select the active design theme palette.</div>
+                            </div>
+
+                            <!-- Support Email -->
+                            <div class="form-group">
+                                <label for="support-email">Public Support Email</label>
+                                <input type="email" id="support-email" name="support_email" value="yash@movieflix.io">
+                                <div class="form-help">Email shown to users in footer and contact page.</div>
+                            </div>
+
+                            <!-- GitHub Live Project Repository -->
+                            <div class="form-group full-width">
+                                <label for="github-project">GitHub Live Project Repository</label>
+                                <input type="url" id="github-project" name="github_project" value="https://github.com/Yash321338">
+                                <div class="form-help">Official source code repository & developer profile link.</div>
+                            </div>
+
+                            <!-- System Status -->
+                            <div class="form-group">
+                                <label for="maintenance-mode">Maintenance Mode</label>
+                                <select id="maintenance-mode" name="maintenance_mode">
+                                    <option value="off" selected>Disabled (Site is Live & Operational)</option>
+                                    <option value="on">Enabled (Under Scheduled Maintenance)</option>
+                                </select>
+                            </div>
+
+                            <!-- Registration Toggle -->
+                            <div class="form-group">
+                                <label for="user-registration">User Registration</label>
+                                <select id="user-registration" name="user_registration">
+                                    <option value="enabled" selected>Allow Public Signups (Open)</option>
+                                    <option value="disabled">Disable Signups (Closed)</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Form Buttons -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">&#10004; Save Settings</button>
+                            <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                        </div>
+
+                    </form>
+                </div>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

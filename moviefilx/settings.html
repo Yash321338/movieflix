@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix - Update your profile settings, name, email and password.">
+    <title>MovieFlix - Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Movie<span>Flix</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="tv-shows.html">TV Shows</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="profile-layout">
+
+        <div class="profile-sidebar">
+            <div class="profile-avatar">
+                <img src="images/profile.jpg" alt="Lina Anderson">
+                <h3>Lina Anderson</h3>
+                <p>Member since December 2026</p>
+            </div>
+            <div class="profile-menu">
+                <a href="profile.html">&#128100; Profile</a>
+                <a href="profile.html">&#128065; Watchlist</a>
+                <a href="profile.html">&#10084; Favorites</a>
+                <a href="profile.html">&#128250; History</a>
+                <a href="settings.html">&#9881; Settings</a>
+                <a href="login.html">&#128682; Logout</a>
+            </div>
+        </div>
+
+        <div class="settings-wrap" style="padding: 0; max-width: 100%; flex: 1;">
+            <div style="padding: 0 0 20px 0;">
+                <h1 style="font-size:26px; color:#ffffff; margin-bottom:5px;">Profile Settings</h1>
+                <p class="subtitle" style="font-size:14px; color:#aaaaaa;">Update your account details below</p>
+            </div>
+
+            <div class="settings-form">
+                <h3>Personal Information</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="display-name">Display Name</label>
+                        <input type="text" id="display-name" name="display-name" value="Lina Anderson">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" value="linaanderson@movieflix.com">
+                    </div>
+
+                    <h3 style="margin-top: 20px;">Change Password</h3>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current-password" placeholder="Enter current password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password">
+                    </div>
+
+                    <div class="settings-buttons">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a href="profile.html" class="btn btn-outline">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">MovieFlix</div>
+                <p>Your ultimate destination for movies and TV shows.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Rajkot, Gujarat</p>
+                <p>yash@movieflix.io</p>
+                <p>+91 9876543210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MovieFlix. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

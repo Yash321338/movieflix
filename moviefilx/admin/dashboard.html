@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - Dashboard Overview">
+    <title>Dashboard - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <!-- Sidebar Brand Header -->
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <!-- Admin Profile Quick Summary -->
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html" class="active"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <!-- Quick Global Search -->
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit" title="Search">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank" title="View live user portal">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Welcome to MovieFlix Admin</h2>
+                        <p>Real-time analytics, content catalogue controls, and system monitoring</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="add-movie.html" class="btn btn-primary">&#10133; Add New Movie</a>
+                        <a href="../index.html" class="btn btn-secondary" target="_blank">&#128065; View Live Site</a>
+                    </div>
+                </div>
+
+                <!-- College Project Academic Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>College Project Note:</strong> Frontend prototype built with standard HTML5 and CSS3. Data values are static representations for academic assessment.</div>
+                </div>
+
+                <!-- 4 Summary KPI Cards -->
+                <div class="dashboard-cards">
+                    <!-- Card 1: Total Movies -->
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3>Total Movies</h3>
+                            <div class="stat-number">2,847</div>
+                            <div class="stat-change">&#9650; +14 added this week</div>
+                        </div>
+                        <div class="stat-icon">&#127916;</div>
+                    </div>
+
+                    <!-- Card 2: Total Users -->
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3>Total Users</h3>
+                            <div class="stat-number">5,200</div>
+                            <div class="stat-change">&#9650; +84 new registrations</div>
+                        </div>
+                        <div class="stat-icon">&#128101;</div>
+                    </div>
+
+                    <!-- Card 3: Categories -->
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3>Categories</h3>
+                            <div class="stat-number">24</div>
+                            <div class="stat-change">&#10004; All categories active</div>
+                        </div>
+                        <div class="stat-icon">&#128194;</div>
+                    </div>
+
+                    <!-- Card 4: Total Reviews -->
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3>Total Reviews</h3>
+                            <div class="stat-number">12,400</div>
+                            <div class="stat-change">&#9650; +340 this month</div>
+                        </div>
+                        <div class="stat-icon">&#9733;</div>
+                    </div>
+                </div>
+
+                <!-- Section: Recent Movies Table -->
+                <section class="card-section">
+                    <div class="card-header">
+                        <h3>Recent Movies</h3>
+                        <a href="manage-movies.html">View All Movies &rarr;</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Movie ID</th>
+                                    <th>Poster</th>
+                                    <th>Movie Name</th>
+                                    <th>Genre</th>
+                                    <th>Release Year</th>
+                                    <th>IMDb Rating</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#MOV-1001</td>
+                                    <td><img src="../images/movie2.jpg" alt="Chronicles of Neon" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Chronicles of Neon</td>
+                                    <td>Sci-Fi / Thriller</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 8.9</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-movies.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#MOV-1002</td>
+                                    <td><img src="../images/movie4.jpg" alt="Under the Rain" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Under the Rain</td>
+                                    <td>Drama / Romance</td>
+                                    <td>2023</td>
+                                    <td><span class="badge-rating">&#9733; 7.8</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-movies.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#MOV-1003</td>
+                                    <td><img src="../images/movie8.jpg" alt="Dark Net Protocol" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Dark Net Protocol</td>
+                                    <td>Action / Cyberpunk</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 8.2</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-movies.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#MOV-1004</td>
+                                    <td><img src="../images/movie1.jpg" alt="Extraction Hour" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Extraction Hour</td>
+                                    <td>Action / Thriller</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 8.5</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-movies.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section: Recent Users Table -->
+                <section class="card-section">
+                    <div class="card-header">
+                        <h3>Recent Users</h3>
+                        <a href="manage-users.html">View All Users &rarr;</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Profile</th>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Join Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#USR-5200</td>
+                                    <td><img src="../images/profile.jpg" alt="Sarah Connor" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Sarah Connor</td>
+                                    <td>sarah.connor@example.com</td>
+                                    <td>Nov 17, 2026</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="manage-users.html" class="btn-action btn-view">View</a>
+                                            <a href="manage-users.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-users.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#USR-5199</td>
+                                    <td><img src="../images/admin-profile.jpg" alt="Marcus Wright" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Marcus Wright</td>
+                                    <td>marcus.wright@example.com</td>
+                                    <td>Nov 15, 2026</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="manage-users.html" class="btn-action btn-view">View</a>
+                                            <a href="manage-users.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-users.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#USR-5198</td>
+                                    <td><img src="../images/profile.jpg" alt="Elena Rostova" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Elena Rostova</td>
+                                    <td>elena.rostova@example.com</td>
+                                    <td>Nov 14, 2026</td>
+                                    <td><span class="badge badge-pending">Pending</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="manage-users.html" class="btn-action btn-view">View</a>
+                                            <a href="manage-users.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="manage-users.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section: Recent Reviews Table -->
+                <section class="card-section">
+                    <div class="card-header">
+                        <h3>Recent Reviews</h3>
+                        <a href="manage-reviews.html">View All Reviews &rarr;</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Review ID</th>
+                                    <th>User Name</th>
+                                    <th>Movie Name</th>
+                                    <th>Rating</th>
+                                    <th>Comment</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#REV-901</td>
+                                    <td>Sarah Connor</td>
+                                    <td>Chronicles of Neon</td>
+                                    <td><span class="badge-rating">&#9733; 9.0</span></td>
+                                    <td>Incredible cyberpunk visuals and gripping storyline from start to finish!</td>
+                                    <td>Nov 18, 2026</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="manage-reviews.html" class="btn-action btn-view">View</a>
+                                            <a href="manage-reviews.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#REV-902</td>
+                                    <td>Marcus Wright</td>
+                                    <td>Extraction Hour</td>
+                                    <td><span class="badge-rating">&#9733; 8.5</span></td>
+                                    <td>Non-stop intense action scenes with exceptional stunt choreography.</td>
+                                    <td>Nov 17, 2026</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="manage-reviews.html" class="btn-action btn-view">View</a>
+                                            <a href="manage-reviews.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#REV-903</td>
+                                    <td>Elena Rostova</td>
+                                    <td>Under the Rain</td>
+                                    <td><span class="badge-rating">&#9733; 8.0</span></td>
+                                    <td>Very touching emotional drama with wonderful acting and music.</td>
+                                    <td>Nov 16, 2026</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="manage-reviews.html" class="btn-action btn-view">View</a>
+                                            <a href="manage-reviews.html" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

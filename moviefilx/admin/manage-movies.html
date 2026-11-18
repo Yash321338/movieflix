@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - Manage Movies">
+    <title>Manage Movies - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html" class="active"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header with Action Button -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Manage Movies</h2>
+                        <p>View, search, edit, and organize movie catalog records</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="add-movie.html" class="btn btn-primary">&#10133; Add New Movie</a>
+                    </div>
+                </div>
+
+                <!-- College Project Academic Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>Project Note:</strong> Static representation of movie inventory. Edit button leads to <code>edit-movie.html</code> with sample pre-filled data.</div>
+                </div>
+
+                <!-- Table Card Container -->
+                <div class="card-section">
+
+                    <!-- Search & Filter Toolbar -->
+                    <div class="table-toolbar">
+                        <div class="toolbar-search">
+                            <input type="text" placeholder="Search movie by title...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <select class="toolbar-select">
+                                <option value="">All Genres</option>
+                                <option value="action">Action</option>
+                                <option value="scifi">Sci-Fi</option>
+                                <option value="comedy">Comedy</option>
+                                <option value="drama">Drama</option>
+                                <option value="romance">Romance</option>
+                                <option value="horror">Horror</option>
+                            </select>
+
+                            <select class="toolbar-select">
+                                <option value="">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+
+                            <button type="button" class="btn btn-secondary">Filter</button>
+                        </div>
+                    </div>
+
+                    <!-- Movie Data Table -->
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Movie ID</th>
+                                    <th>Movie Poster</th>
+                                    <th>Movie Name</th>
+                                    <th>Genre</th>
+                                    <th>Release Year</th>
+                                    <th>IMDb Rating</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample Movie 1 -->
+                                <tr>
+                                    <td>#MOV-1001</td>
+                                    <td><img src="../images/movie2.jpg" alt="Chronicles of Neon" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Chronicles of Neon</td>
+                                    <td>Sci-Fi / Thriller</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 8.9</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete" title="Static Demo Delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample Movie 2 -->
+                                <tr>
+                                    <td>#MOV-1002</td>
+                                    <td><img src="../images/movie4.jpg" alt="Under the Rain" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Under the Rain</td>
+                                    <td>Drama / Romance</td>
+                                    <td>2023</td>
+                                    <td><span class="badge-rating">&#9733; 7.8</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample Movie 3 -->
+                                <tr>
+                                    <td>#MOV-1003</td>
+                                    <td><img src="../images/movie8.jpg" alt="Dark Net Protocol" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Dark Net Protocol</td>
+                                    <td>Action / Cyberpunk</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 8.2</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample Movie 4 -->
+                                <tr>
+                                    <td>#MOV-1004</td>
+                                    <td><img src="../images/movie1.jpg" alt="Extraction Hour" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Extraction Hour</td>
+                                    <td>Action / Thriller</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 8.5</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample Movie 5 -->
+                                <tr>
+                                    <td>#MOV-1005</td>
+                                    <td><img src="../images/movie7.jpg" alt="Stellar Bound" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Stellar Bound</td>
+                                    <td>Sci-Fi / Adventure</td>
+                                    <td>2023</td>
+                                    <td><span class="badge-rating">&#9733; 8.1</span></td>
+                                    <td><span class="badge badge-inactive">Inactive</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Additional realistic sample movies -->
+                                <tr>
+                                    <td>#MOV-1006</td>
+                                    <td><img src="../images/movie3.jpg" alt="The Dark Hollow" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">The Dark Hollow</td>
+                                    <td>Horror / Mystery</td>
+                                    <td>2023</td>
+                                    <td><span class="badge-rating">&#9733; 7.4</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#MOV-1007</td>
+                                    <td><img src="../images/movie5.jpg" alt="Office Chaos" class="movie-thumb"></td>
+                                    <td class="movie-title-cell">Office Chaos</td>
+                                    <td>Comedy</td>
+                                    <td>2024</td>
+                                    <td><span class="badge-rating">&#9733; 7.2</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="edit-movie.html" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

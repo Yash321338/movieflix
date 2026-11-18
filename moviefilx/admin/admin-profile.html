@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - Admin Profile">
+    <title>Admin Profile - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html" class="active"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Admin Profile</h2>
+                        <p>Manage personal account credentials and security settings</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="dashboard.html" class="btn btn-secondary">&larr; Return to Dashboard</a>
+                    </div>
+                </div>
+
+                <!-- Academic Viva Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>Project Note:</strong> Admin profile page presenting display information and password update form. Demonstrates semantic HTML5 and CSS3 styling.</div>
+                </div>
+
+                <!-- Profile Overview Display Card -->
+                <div class="profile-overview-card">
+                    <img src="../images/admin-profile.jpg" alt="Alex Mercer" class="profile-avatar-large">
+                    <div class="profile-overview-info">
+                        <h3>Alex Mercer (Developer: Yash)</h3>
+                        <p><strong>Email:</strong> <a href="mailto:alex.mercer@movieflix.com" style="color: #ff8e8e;">alex.mercer@movieflix.com</a></p>
+                        <p><strong>GitHub Project:</strong> <a href="https://github.com/Yash321338" target="_blank" style="color: #4cd964; font-weight: bold;">&#128187; github.com/Yash321338</a></p>
+                        <p><strong>Security Role:</strong> <span class="role-badge">Super Administrator</span></p>
+                        <p style="font-size: 12px; color: #777;">Account Created: January 15, 2024 &bull; Last Login: Today from Rajkot, India</p>
+                    </div>
+                </div>
+
+                <!-- Profile Edit Form Card -->
+                <div class="form-card">
+                    <h3 style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #282828; color: #ffffff;">
+                        &#9998; Update Profile & Security Credentials
+                    </h3>
+
+                    <form action="dashboard.html" method="get">
+
+                        <div class="form-grid">
+
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="profile-name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="profile-name" name="full_name" value="Alex Mercer" required>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="form-group">
+                                <label for="profile-email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="profile-email" name="email" value="alex.mercer@movieflix.com" required>
+                            </div>
+
+                            <!-- Avatar Upload -->
+                            <div class="form-group full-width">
+                                <label for="profile-image">Update Profile Picture</label>
+                                <input type="file" id="profile-image" name="profile_image" accept="image/*">
+                                <div class="form-help">Current image: admin-profile.jpg (Square aspect ratio recommended).</div>
+                            </div>
+
+                            <!-- Current Password -->
+                            <div class="form-group full-width">
+                                <label for="current-password">Current Password <span class="required">*</span></label>
+                                <input type="password" id="current-password" name="current_password" placeholder="Enter current admin password" required>
+                                <div class="form-help">Required to authenticate and apply credential changes.</div>
+                            </div>
+
+                            <!-- New Password -->
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new_password" placeholder="Enter new password (min. 8 chars)">
+                            </div>
+
+                            <!-- Confirm Password -->
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password" name="confirm_password" placeholder="Re-type new password to confirm">
+                            </div>
+
+                        </div>
+
+                        <!-- Form Action Buttons -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">&#10004; Update Profile</button>
+                            <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                        </div>
+
+                    </form>
+                </div>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

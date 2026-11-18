@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - Contact Messages">
+    <title>Contact Messages - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html" class="active"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Contact Messages</h2>
+                        <p>Inquiries, technical support tickets, and suggestions received via Contact Us form</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="../contact.html" class="btn btn-secondary" target="_blank">&#128065; View Public Contact Page</a>
+                    </div>
+                </div>
+
+                <!-- Academic Viva Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>Project Note:</strong> Support inbox displaying static communications with View, Reply, and Delete action options.</div>
+                </div>
+
+                <!-- Messages Table Card Section -->
+                <div class="card-section">
+
+                    <!-- Toolbar / Filters -->
+                    <div class="table-toolbar">
+                        <div class="toolbar-search">
+                            <input type="text" placeholder="Search messages by name or subject...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <select class="toolbar-select">
+                                <option value="">All Statuses</option>
+                                <option value="unread">Unread</option>
+                                <option value="replied">Replied</option>
+                                <option value="read">Read</option>
+                            </select>
+                            <button type="button" class="btn btn-secondary">Filter</button>
+                        </div>
+                    </div>
+
+                    <!-- Messages Table -->
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Message ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#MSG-201</td>
+                                    <td class="movie-title-cell">David Miller</td>
+                                    <td>david.m@gmail.com</td>
+                                    <td>Streaming Issue</td>
+                                    <td style="max-width: 280px;">Video buffering issue on Chrome browser when playing 4K Ultra HD titles.</td>
+                                    <td>Nov 18, 2026</td>
+                                    <td><span class="badge badge-danger">Unread</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="mailto:david.m@gmail.com" class="btn-action btn-reply">Reply</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#MSG-202</td>
+                                    <td class="movie-title-cell">Sophia Chen</td>
+                                    <td>sophia.c@yahoo.com</td>
+                                    <td>Subscription Inquiry</td>
+                                    <td style="max-width: 280px;">How do I upgrade my individual monthly plan to the family annual billing discount?</td>
+                                    <td>Nov 17, 2026</td>
+                                    <td><span class="badge badge-success">Replied</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="mailto:sophia.c@yahoo.com" class="btn-action btn-reply">Reply</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#MSG-203</td>
+                                    <td class="movie-title-cell">Rahul Verma</td>
+                                    <td>rahul.v@outlook.com</td>
+                                    <td>Content Suggestion</td>
+                                    <td style="max-width: 280px;">Please consider adding the 90s classic science fiction movies collection to MovieFlix!</td>
+                                    <td>Nov 16, 2026</td>
+                                    <td><span class="badge badge-info">Read</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="mailto:rahul.v@outlook.com" class="btn-action btn-reply">Reply</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#MSG-204</td>
+                                    <td class="movie-title-cell">Lisa Johnson</td>
+                                    <td>lisa.j@domain.com</td>
+                                    <td>Account Login Issue</td>
+                                    <td style="max-width: 280px;">I did not receive the verification link for resetting my forgotten password.</td>
+                                    <td>Nov 15, 2026</td>
+                                    <td><span class="badge badge-danger">Unread</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="mailto:lisa.j@domain.com" class="btn-action btn-reply">Reply</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#MSG-205</td>
+                                    <td class="movie-title-cell">Michael Brown</td>
+                                    <td>mbrown@test.org</td>
+                                    <td>Partnership Request</td>
+                                    <td style="max-width: 280px;">Inquiring about collaboration to stream independent student film festival winners.</td>
+                                    <td>Nov 12, 2026</td>
+                                    <td><span class="badge badge-success">Replied</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="mailto:mbrown@test.org" class="btn-action btn-reply">Reply</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

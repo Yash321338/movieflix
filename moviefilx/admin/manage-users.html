@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - Manage Users">
+    <title>Manage Users - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html" class="active"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Manage Users</h2>
+                        <p>Total Registered Accounts: 5,200 &bull; Platform member directory</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="#" class="btn btn-primary">&#10133; Add New User</a>
+                    </div>
+                </div>
+
+                <!-- Academic Viva Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>Project Note:</strong> User management user interface displaying static profile entries with View, Edit, and Delete action controls.</div>
+                </div>
+
+                <!-- Card Section with User Table -->
+                <div class="card-section">
+
+                    <!-- Toolbar / Filters -->
+                    <div class="table-toolbar">
+                        <div class="toolbar-search">
+                            <input type="text" placeholder="Search by name or email...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <select class="toolbar-select">
+                                <option value="">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="suspended">Suspended</option>
+                            </select>
+                            <select class="toolbar-select">
+                                <option value="">All Roles</option>
+                                <option value="subscriber">Subscriber</option>
+                                <option value="free">Free User</option>
+                                <option value="moderator">Moderator</option>
+                            </select>
+                            <button type="button" class="btn btn-secondary">Search</button>
+                        </div>
+                    </div>
+
+                    <!-- User Table -->
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Profile Image</th>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Join Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample User 1: Sarah Connor -->
+                                <tr>
+                                    <td>#USR-5200</td>
+                                    <td><img src="../images/profile.jpg" alt="Sarah Connor" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Sarah Connor</td>
+                                    <td>sarah.connor@example.com</td>
+                                    <td>Nov 17, 2026</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="#" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample User 2: Marcus Wright -->
+                                <tr>
+                                    <td>#USR-5199</td>
+                                    <td><img src="../images/admin-profile.jpg" alt="Marcus Wright" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Marcus Wright</td>
+                                    <td>marcus.wright@example.com</td>
+                                    <td>Nov 15, 2026</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="#" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample User 3: Elena Rostova -->
+                                <tr>
+                                    <td>#USR-5198</td>
+                                    <td><img src="../images/profile.jpg" alt="Elena Rostova" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Elena Rostova</td>
+                                    <td>elena.rostova@example.com</td>
+                                    <td>Nov 14, 2026</td>
+                                    <td><span class="badge badge-inactive">Inactive</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="#" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample User 4: John Doe -->
+                                <tr>
+                                    <td>#USR-5197</td>
+                                    <td><img src="../images/admin-profile.jpg" alt="John Doe" class="user-avatar"></td>
+                                    <td class="movie-title-cell">John Doe</td>
+                                    <td>john.doe@example.com</td>
+                                    <td>Oct 29, 2026</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="#" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample User 5: Lina Anderson -->
+                                <tr>
+                                    <td>#USR-5196</td>
+                                    <td><img src="../images/profile.jpg" alt="Lina Anderson" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Lina Anderson</td>
+                                    <td>linaanderson@movieflix.com</td>
+                                    <td>Oct 12, 2026</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="#" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Sample User 6: Kyle Reese -->
+                                <tr>
+                                    <td>#USR-5195</td>
+                                    <td><img src="../images/admin-profile.jpg" alt="Kyle Reese" class="user-avatar"></td>
+                                    <td class="movie-title-cell">Kyle Reese</td>
+                                    <td>kyle.reese@example.com</td>
+                                    <td>Sep 20, 2026</td>
+                                    <td><span class="badge badge-danger">Suspended</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="btn-action btn-view">View</a>
+                                            <a href="#" class="btn-action btn-edit">Edit</a>
+                                            <a href="#" class="btn-action btn-delete">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

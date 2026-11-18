@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix - View your profile, watchlist, favorites and watch history.">
+    <title>MovieFlix - My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Movie<span>Flix</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="tv-shows.html">TV Shows</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="profile-layout">
+
+        <div class="profile-sidebar">
+            <div class="profile-avatar">
+                <img src="images/profile.jpg" alt="Lina Anderson">
+                <h3>Lina Anderson</h3>
+                <p>Member since December 2026</p>
+            </div>
+            <div class="profile-menu">
+                <a href="profile.html">&#128100; Profile</a>
+                <a href="profile.html">&#128065; Watchlist</a>
+                <a href="profile.html">&#10084; Favorites</a>
+                <a href="profile.html">&#128250; History</a>
+                <a href="settings.html">&#9881; Settings</a>
+                <a href="login.html">&#128682; Logout</a>
+            </div>
+        </div>
+
+        <div class="profile-content">
+
+            <div class="profile-info-box">
+                <h3>Profile Information</h3>
+                <p><strong>Name:</strong> Lina Anderson</p>
+                <p><strong>Email:</strong> linaanderson@movieflix.com</p>
+                <p><strong>Phone:</strong> +91 9876543210</p>
+                <p><strong>Member Since:</strong> December 2026</p>
+            </div>
+
+            <div class="profile-info-box">
+                <h3>Watch History</h3>
+                <div class="movie-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="movie-card">
+                        <img src="images/movie2.jpg" alt="Chronicles of Neon">
+                        <div class="movie-card-info">
+                            <h3>Chronicles of Neon</h3>
+                            <p>Watched: Yesterday</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="images/movie1.jpg" alt="Iron Storm">
+                        <div class="movie-card-info">
+                            <h3>Iron Storm</h3>
+                            <p>Watched: 2 days ago</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="images/movie7.jpg" alt="Galaxy Breach">
+                        <div class="movie-card-info">
+                            <h3>Galaxy Breach</h3>
+                            <p>Watched: Last week</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-info-box">
+                <h3>Favorites</h3>
+                <div class="movie-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="movie-card">
+                        <img src="images/movie4.jpg" alt="Forever in Paris">
+                        <div class="movie-card-info">
+                            <h3>Forever in Paris</h3>
+                            <p class="rating">&#9733; 7.5</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="images/movie8.jpg" alt="Mind Trap">
+                        <div class="movie-card-info">
+                            <h3>Mind Trap</h3>
+                            <p class="rating">&#9733; 8.1</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="images/movie6.jpg" alt="Jungle Quest">
+                        <div class="movie-card-info">
+                            <h3>Jungle Quest</h3>
+                            <p class="rating">&#9733; 8.0</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-info-box">
+                <h3>Watchlist</h3>
+                <div class="movie-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="movie-card">
+                        <img src="images/movie3.jpg" alt="The Dark Hollow">
+                        <div class="movie-card-info">
+                            <h3>The Dark Hollow</h3>
+                            <p class="rating">&#9733; 7.8</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="images/movie5.jpg" alt="Office Chaos">
+                        <div class="movie-card-info">
+                            <h3>Office Chaos</h3>
+                            <p class="rating">&#9733; 7.2</p>
+                            <a href="movie-details.html" class="btn btn-primary btn-small">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">MovieFlix</div>
+                <p>Your ultimate destination for movies and TV shows.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Rajkot, Gujarat</p>
+                <p>yash@movieflix.io</p>
+                <p>+91 9876543210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MovieFlix. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

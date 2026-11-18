@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MovieFlix Admin Panel - Add Movie">
+    <title>Add Movie - MovieFlix Admin</title>
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-container">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <img src="../images/logo.png" alt="MovieFlix Logo">
+                <div class="brand-text">Movie<span>Flix</span></div>
+                <span class="admin-badge">Admin</span>
+            </div>
+
+            <div class="sidebar-profile">
+                <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                <div class="profile-info">
+                    <h4>Alex Mercer</h4>
+                    <p>&#9679; Super Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <div class="sidebar-heading">Main Navigation</div>
+                <a href="dashboard.html"><span class="menu-icon">&#128202;</span> Dashboard</a>
+                <a href="manage-movies.html"><span class="menu-icon">&#127916;</span> Manage Movies</a>
+                <a href="add-movie.html" class="active"><span class="menu-icon">&#10133;</span> Add Movie</a>
+                <a href="manage-categories.html"><span class="menu-icon">&#128194;</span> Categories</a>
+                <a href="manage-users.html"><span class="menu-icon">&#128101;</span> Users</a>
+                <a href="manage-reviews.html"><span class="menu-icon">&#9733;</span> Reviews</a>
+                <a href="contact-messages.html"><span class="menu-icon">&#9993;</span> Messages</a>
+
+                <div class="sidebar-heading">Preferences</div>
+                <a href="admin-settings.html"><span class="menu-icon">&#9881;</span> Settings</a>
+                <a href="admin-profile.html"><span class="menu-icon">&#128100;</span> Admin Profile</a>
+                <a href="admin-login.html" class="logout-link"><span class="menu-icon">&#128682;</span> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
+        <div class="main-wrapper">
+
+            <!-- Admin Top Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <span class="header-title">MovieFlix Admin Panel</span>
+                    <form class="header-search" action="manage-movies.html" method="get">
+                        <input type="text" name="q" placeholder="Search movies, users, reviews...">
+                        <button type="submit">&#128269;</button>
+                    </form>
+                </div>
+                <div class="header-right">
+                    <a href="https://github.com/Yash321338" class="header-btn" target="_blank" title="GitHub Live Project">&#128187; GitHub</a>
+                    <a href="../index.html" class="header-btn" target="_blank">&#127760; View Website</a>
+                    <a href="admin-profile.html" class="header-user">
+                        <img src="../images/admin-profile.jpg" alt="Alex Mercer">
+                        <div>
+                            <div class="user-name">Alex Mercer</div>
+                            <div class="user-role">Super Admin</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Add New Movie</h2>
+                        <p>Fill out the metadata to publish a new film into the catalog</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="manage-movies.html" class="btn btn-secondary">&larr; Back to Movie List</a>
+                    </div>
+                </div>
+
+                <!-- Viva Academic Notice -->
+                <div class="viva-notice">
+                    <span>&#9432;</span>
+                    <div><strong>Project Note:</strong> Form fields validate with native HTML5 attributes. Submission redirects to Movie Management table (no database backend).</div>
+                </div>
+
+                <!-- Add Movie Form Card -->
+                <div class="form-card">
+                    <form action="manage-movies.html" method="get">
+
+                        <div class="form-grid">
+
+                            <!-- Movie Title -->
+                            <div class="form-group full-width">
+                                <label for="movie-title">Movie Title <span class="required">*</span></label>
+                                <input type="text" id="movie-title" name="movie_title" placeholder="e.g. Interstellar Odyssey" required>
+                                <div class="form-help">Enter the official full title of the movie.</div>
+                            </div>
+
+                            <!-- Movie Poster -->
+                            <div class="form-group">
+                                <label for="movie-poster">Movie Poster Image <span class="required">*</span></label>
+                                <input type="file" id="movie-poster" name="movie_poster" accept="image/*" required>
+                                <div class="form-help">Recommended ratio: 2:3 (e.g. 800x1200px JPG/PNG).</div>
+                            </div>
+
+                            <!-- Movie Banner -->
+                            <div class="form-group">
+                                <label for="movie-banner">Movie Banner Image</label>
+                                <input type="file" id="movie-banner" name="movie_banner" accept="image/*">
+                                <div class="form-help">Wide billboard image for featured carousel (e.g. 1920x800px).</div>
+                            </div>
+
+                            <!-- Genre Selection -->
+                            <div class="form-group">
+                                <label for="movie-genre">Genre <span class="required">*</span></label>
+                                <select id="movie-genre" name="genre" required>
+                                    <option value="" disabled selected>-- Select Movie Genre --</option>
+                                    <option value="Action">Action</option>
+                                    <option value="Sci-Fi">Sci-Fi</option>
+                                    <option value="Comedy">Comedy</option>
+                                    <option value="Drama">Drama</option>
+                                    <option value="Romance">Romance</option>
+                                    <option value="Horror">Horror</option>
+                                    <option value="Thriller">Thriller</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="Adventure">Adventure</option>
+                                </select>
+                            </div>
+
+                            <!-- Language -->
+                            <div class="form-group">
+                                <label for="movie-language">Language <span class="required">*</span></label>
+                                <select id="movie-language" name="language" required>
+                                    <option value="" disabled selected>-- Select Primary Language --</option>
+                                    <option value="English">English</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="French">French</option>
+                                    <option value="Japanese">Japanese</option>
+                                    <option value="German">German</option>
+                                </select>
+                            </div>
+
+                            <!-- Release Date -->
+                            <div class="form-group">
+                                <label for="release-date">Release Date <span class="required">*</span></label>
+                                <input type="date" id="release-date" name="release_date" required>
+                            </div>
+
+                            <!-- IMDb Rating -->
+                            <div class="form-group">
+                                <label for="imdb-rating">IMDb Rating (0.0 - 10.0) <span class="required">*</span></label>
+                                <input type="number" id="imdb-rating" name="imdb_rating" step="0.1" min="0" max="10" placeholder="e.g. 8.4" required>
+                            </div>
+
+                            <!-- Duration -->
+                            <div class="form-group">
+                                <label for="duration">Duration <span class="required">*</span></label>
+                                <input type="text" id="duration" name="duration" placeholder="e.g. 2h 15m or 135 mins" required>
+                            </div>
+
+                            <!-- YouTube Trailer URL -->
+                            <div class="form-group">
+                                <label for="trailer-url">YouTube Trailer URL</label>
+                                <input type="url" id="trailer-url" name="trailer_url" placeholder="https://www.youtube.com/watch?v=...">
+                            </div>
+
+                            <!-- Movie Description -->
+                            <div class="form-group full-width">
+                                <label for="description">Movie Description / Plot Summary <span class="required">*</span></label>
+                                <textarea id="description" name="description" rows="4" placeholder="Enter a detailed storyline overview of the movie..." required></textarea>
+                            </div>
+
+                            <!-- Publication Status -->
+                            <div class="form-group">
+                                <label for="status">Catalogue Status</label>
+                                <select id="status" name="status">
+                                    <option value="Active" selected>Active (Visible to users)</option>
+                                    <option value="Inactive">Inactive (Hidden)</option>
+                                    <option value="Coming Soon">Coming Soon</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Form Action Buttons -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">&#10004; Save Movie</button>
+                            <a href="manage-movies.html" class="btn btn-secondary">Cancel</a>
+                        </div>
+
+                    </form>
+                </div>
+
+            </main>
+
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <p>&copy; 2026 MovieFlix Admin Panel &bull; College Web Technology Project</p>
+                <p><a href="https://github.com/Yash321338" target="_blank">&#128187; GitHub: Yash321338</a> &bull; <a href="../index.html" target="_blank">Back to Main Website</a> &bull; <a href="admin-settings.html">System Settings</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
